@@ -10,10 +10,21 @@ const another = new Circle(1);
 another.draw();
 console.log("radius " + another.raidius);
 
-let number = {value:10};
+let objectNumber = {value:10};
+let valueNumber = 10;
 
-function increase(anthing) {
+function increaseByReference(anthing) {
+    anthing.value++
+}
+
+function increaseByValue(anthing) {
     anthing++
 }
-increase(number);
-console.log(Object.keys(number) + " " + number.value);
+console.log(objectNumber);
+increaseByReference(objectNumber);
+console.log("Increased by Reference " + Object.keys(objectNumber) + " " + objectNumber.value);
+
+console.log(valueNumber);
+console.log(Object.name);
+increaseByValue(valueNumber);
+console.log("Increased by Value " + Object.keys(valueNumber) + " " + valueNumber);
