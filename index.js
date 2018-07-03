@@ -1,4 +1,4 @@
-let objectNumber = {value:10};
+let objectType = {number:10};
 let valueNumber = 10;
 
 function increaseByReference(anything) {
@@ -9,10 +9,10 @@ function increaseByValue(anything) {
     anything++
 }
 
-console.log(objectNumber);
-increaseByReference(objectNumber);
-console.log("Increased by Reference " + Object.keys(objectNumber) + " " + objectNumber.value);
+console.log(Object.name + ":" + Object.keys(objectType) + " " + objectType.number);
+increaseByReference(objectType);
+console.log("Increased by Reference " + Object.keys(objectType) + " " + objectType.number);
 
-console.log(valueNumber);
+console.log("valueNumber" + ":" + valueNumber);
 increaseByValue(valueNumber);
 console.log("Increased by Value " + Object.keys(valueNumber) + " " + valueNumber);
